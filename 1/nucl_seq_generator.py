@@ -10,3 +10,5 @@ print(result_handler)
 with open('blasta_res.txt', 'w') as save_file:
     blast_res = result_handler.read()
     save_file.write(blast_res)
+
+    
