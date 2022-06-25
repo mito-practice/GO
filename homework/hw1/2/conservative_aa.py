@@ -1,15 +1,37 @@
 from Bio import SeqIO
+from collections import defaultdict
+from collections import Counter
+import matplotlib.pyplot as plt
 
-seq_list = []
-for prot_seq in SeqIO.parse('muscle_res_prot_blastx.fasta', 'fasta'):
-    seq_list.append(prot_seq.seq)
+muscle_res = SeqIO.parse('3_seq_from_muscle.fasta', 'fasta')
+
+seq_len = 2368  # len of one seq, obtained manually
+seq_content = defaultdict(set)
+
+for prot_seq in muscle_res:
+    for position, aa in enumerate(prot_seq):
+        seq_content[position].add(aa)   # look's like {0: {'-'}}, where 0 is the num of the pos and '-' is AA in the pos
+                                        # it also might be like {0: {'A', 'T'}}, meaning, on that pos there were more
+                                        # than one AA at the pos in different sequences
+
 conservative_aa = []
-for i in range(len(seq_list)):                          # start iterating thru every sequence in order to pop every seq
-    seq = seq_list.pop()                                # pop one seq, so that we don't compare it to itself
-    for prot in seq_list:                               # grab every unpopped seq
-        for AA in range(len(prot)):                     # comb thru every aa in one unpopped seq
-            if seq[AA] == prot[AA] and seq[AA] != '-':  # compare aa of unpopped and popped seqs
-                conservative_aa.append(seq[AA])
-with open('conservative_aa.txt', 'w') as save_file:
-    save_file.write(''.join(conservative_aa))
+for aa_set in seq_content.values():
+    if len(aa_set) == 1 and aa_set != {'-'}:
+        conservative_aa.append(aa_set.pop())  # pop to have str in the list, not sets
+
+counted_aa = Counter(conservative_aa)
+
+aa_name = []
+occurrence = []
+
+for k, v in counted_aa.items():
+    aa_name.append(k)
+    occurrence.append(v)
+
+plt.bar(aa_name, occurrence, width=0.8)
+plt.title('AA conservativeness')
+plt.xlabel('AA')
+plt.ylabel('Times being conservative')
+plt.savefig('AA conservativeness.PDF', format='PDF')
+
 
