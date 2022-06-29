@@ -1,0 +1,142 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+BLASTN 2.13.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: B0JB0CNP016
+
+
+Database: Nucleotide collection (nt)
+           83,520,394 sequences; 781,795,575,194 total letters
+Query= 
+Length=897
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+CP050574.1 Canis lupus familiaris breed Labrador retriever chr...  47.3    7.3    96%       
+CP050613.1 Canis lupus familiaris breed Labrador retriever chr...  47.3    7.3    96%       
+OV883988.1 Bombus pratorum genome assembly, chromosome: 6          47.3    7.3    91%       
+HG994387.1 Canis lupus genome assembly, chromosome: 2              47.3    7.3    96%       
+LR884466.1 Acanthopagrus latus isolate v.2019 genome assembly,...  47.3    7.3    96%       
+OW121826.1 Telmatherina bonti genome assembly, chromosome: 6       46.4    7.3    93%       
+
+ALIGNMENTS
+>CP050574.1 Canis lupus familiaris breed Labrador retriever chromosome 02a
+Length=83829384
+
+ Score = 47.3 bits (51),  Expect = 7.3
+ Identities = 27/28 (96%), Gaps = 0/28 (0%)
+ Strand=Plus/Plus
+
+Query  203       GAGAATGACTAGGGTTTTAAGAGGAGCG  230
+                 ||||||||||||||||||| ||||||||
+Sbjct  77741776  GAGAATGACTAGGGTTTTAGGAGGAGCG  77741803
+
+
+>CP050613.1 Canis lupus familiaris breed Labrador retriever chromosome 02b
+Length=83851004
+
+ Score = 47.3 bits (51),  Expect = 7.3
+ Identities = 27/28 (96%), Gaps = 0/28 (0%)
+ Strand=Plus/Plus
+
+Query  203       GAGAATGACTAGGGTTTTAAGAGGAGCG  230
+                 ||||||||||||||||||| ||||||||
+Sbjct  77763859  GAGAATGACTAGGGTTTTAGGAGGAGCG  77763886
+
+
+>OV883988.1 Bombus pratorum genome assembly, chromosome: 6
+Length=17489487
+
+ Score = 47.3 bits (51),  Expect = 7.3
+ Identities = 32/35 (91%), Gaps = 1/35 (3%)
+ Strand=Plus/Plus
+
+Query  353       CTTCCGTTGCGTGATAATGGCATCTCCATGGCAAC  387
+                 |||||||||||| ||||| |||||||| |||||||
+Sbjct  12079026  CTTCCGTTGCGTAATAAT-GCATCTCCGTGGCAAC  12079059
+
+
+>HG994387.1 Canis lupus genome assembly, chromosome: 2
+Length=86397490
+
+ Score = 47.3 bits (51),  Expect = 7.3
+ Identities = 27/28 (96%), Gaps = 0/28 (0%)
+ Strand=Plus/Plus
+
+Query  203       GAGAATGACTAGGGTTTTAAGAGGAGCG  230
+                 ||||||||||||||||||| ||||||||
+Sbjct  80556777  GAGAATGACTAGGGTTTTAGGAGGAGCG  80556804
+
+
+>LR884466.1 Acanthopagrus latus isolate v.2019 genome assembly, chromosome: 
+7
+Length=31194941
+
+ Score = 47.3 bits (51),  Expect = 7.3
+ Identities = 27/28 (96%), Gaps = 0/28 (0%)
+ Strand=Plus/Minus
+
+Query  769       TGATTGCTTGCGTGTCCAGCCCTTTCGG  796
+                 ||||||||||||| ||||||||||||||
+Sbjct  14255620  TGATTGCTTGCGTTTCCAGCCCTTTCGG  14255593
+
+
+>OW121826.1 Telmatherina bonti genome assembly, chromosome: 6
+Length=43200648
+
+ Score = 46.4 bits (50),  Expect = 7.3
+ Identities = 28/30 (93%), Gaps = 0/30 (0%)
+ Strand=Plus/Minus
+
+Query  491       TGTCTCTGGAGGTATTTCACTGGCGAAACT  520
+                 ||||| ||||||||||||||||| ||||||
+Sbjct  21479600  TGTCTTTGGAGGTATTTCACTGGTGAAACT  21479571
+
+
+  Database: Nucleotide collection (nt)
+    Posted date:  Jun 17, 2022  5:15 PM
+  Number of letters in database: 781,795,575,194
+  Number of sequences in database:  83,520,394
+
+Lambda      K        H
+   0.634    0.408    0.912 
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+Matrix: blastn matrix:2 -3
+Gap Penalties: Existence: 5, Extension: 2
+Number of Sequences: 83520394
+Number of Hits to DB: 30584245
+Number of extensions: 29580
+Number of successful extensions: 29580
+Number of sequences better than 10: 0
+Number of HSP's better than 10 without gapping: 0
+Number of HSP's gapped: 29580
+Number of HSP's successfully gapped: 0
+Length of query: 897
+Length of database: 781795575194
+Length adjustment: 40
+Effective length of query: 857
+Effective length of database: 778454759434
+Effective search space: 667135728834938
+Effective search space used: 667135728834938
+A: 0
+X1: 22 (20.1 bits)
+X2: 33 (29.8 bits)
+X3: 110 (99.2 bits)
+S1: 28 (26.5 bits)
+S2: 50 (46.4 bits)
+
+
